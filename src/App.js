@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Sidebar from './components/Sidebar';
+import Dashboard from './components/Dashboard';
+import AttendanceCheck from './components/AttendanceCheck';
+import AttendanceRecord from './components/AttendanceRecord';
+import Statistics from './components/Statistics';
+import CalendarView from './components/CalendarView'; 
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex">
+      <Sidebar />
+      <div className="flex-1 p-6 bg-gray-100">
+        <Dashboard />
+        <AttendanceCheck />
+        <AttendanceRecord />
+        <Statistics />
+        <CalendarView />
+      </div>
     </div>
   );
 }
