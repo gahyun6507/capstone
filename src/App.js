@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Router 추가
 import Sidebar from './components/Sidebar';
@@ -29,3 +30,25 @@ function App() {
 }
 
 export default App;
+||||||| (empty tree)
+=======
+import React from 'react';
+import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import Dashboard from './components/Dashboard';
+import './App.css';
+
+function App() {
+  return (
+    <div className="app">
+      <Sidebar />
+      <div className="main-content">
+        <Header />
+        <Dashboard />
+      </div>
+    </div>
+  );
+}
+
+export default App;
+>>>>>>> 01b18e9 (update)
