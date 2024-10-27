@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+import React from 'react';
+import AttendanceRecord from './AttendanceRecord'; // 출석 기록 컴포넌트 임포트
+import Statistics from './Statistics'; // 통계 컴포넌트 임포트
+import CalendarView from './CalendarView'; // 캘린더 컴포넌트 임포트
+>>>>>>> fcfc066c911b77dfb0b14d336f7e24a845dbc71c
 
 function Dashboard() {
   const [data, setData] = useState({
@@ -29,6 +36,7 @@ function Dashboard() {
 
   return (
     <div>
+      <div>
       <h2 className="text-3xl font-bold mb-4">대시보드</h2>
       <div className="grid grid-cols-3 gap-6">
         <div className="bg-white p-6 shadow-lg rounded-lg">
@@ -44,6 +52,10 @@ function Dashboard() {
           <p>{data.attendanceRate}%</p>
         </div>
       </div>
+    </div>
+      <AttendanceRecord /> {/* 출석 기록 컴포넌트 */}
+      <Statistics /> {/* 통계 컴포넌트 */}
+      <CalendarView /> {/* 캘린더 컴포넌트 */}
     </div>
   );
 }
